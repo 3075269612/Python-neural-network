@@ -1,0 +1,19 @@
+name: ai_learn
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - pillow
+  - pip
+  - pytorch
+  - torchvision
+  - tqdm
+  - seaborn
+  - jupyter
+  - pip:
+      - opencv-python

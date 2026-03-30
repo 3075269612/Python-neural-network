@@ -1,0 +1,39 @@
+# Python cache and build
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# VS Code
+.vscode/*.code-workspace
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Experiment artifacts
+outputs/logs/*
+!outputs/logs/.gitkeep
+outputs/figures/*
+!outputs/figures/.gitkeep
+models/*
+!models/.gitkeep
+
+# Dataset files
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db

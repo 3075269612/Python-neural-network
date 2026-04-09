@@ -11,7 +11,6 @@
 
 ```text
 .
-|- 1.py
 |- deep-research-report.md
 |- README.md
 |- requirements.txt
@@ -20,9 +19,13 @@
 |  |- README.md
 |  |- ch1/
 |  |- ch2/
+|  |  `- book_notebooks/
 |  |- ch3/
+|  |  `- book_notebooks/
 |- data/
 |  |- raw/
+|  |  |- book_mnist_csv/
+|  |  `- book_own_images/
 |  |- processed/
 |- models/
 |- outputs/
@@ -33,6 +36,8 @@
 |- scripts/
 |  |- run_quick_start.ps1
 |  |- run_chapter3.ps1
+|- third_party/
+|  `- makeyourownneuralnetwork/
 `- .vscode/
 ```
 
@@ -44,7 +49,32 @@
 可使用以下命令验证环境：
 
 ```powershell
-python .\1.py
+python -c "import sys, numpy, matplotlib, torch, torchvision; print('python:', sys.version.split()[0]); print('numpy:', numpy.__version__); print('matplotlib:', matplotlib.__version__); print('torch:', torch.__version__); print('torchvision:', torchvision.__version__)"
+```
+
+## 教材源码整合（已完成）
+- 教材原始仓库已按章节分流到：
+	- experiments/ch2/book_notebooks
+	- experiments/ch3/book_notebooks
+- 教材 CSV 和手写图片样例已迁移到：
+	- data/raw/book_mnist_csv
+	- data/raw/book_own_images
+- 教材版权与说明文档保留在：
+	- third_party/makeyourownneuralnetwork
+- Notebook 中原有相对路径已改成项目统一数据目录路径，可直接运行。
+
+## 教材 Notebook 入口
+
+### Chapter 2（教材版）
+```text
+experiments/ch2/book_notebooks/part2_neural_network_mnist_data.ipynb
+```
+
+### Chapter 3（教材版）
+```text
+experiments/ch3/book_notebooks/part3_neural_network_mnist_data_with_rotations.ipynb
+experiments/ch3/book_notebooks/part3_neural_network_mnist_and_own_single_image.ipynb
+experiments/ch3/book_notebooks/part3_neural_network_mnist_backquery.ipynb
 ```
 
 ## 依赖安装

@@ -31,6 +31,10 @@ models/*
 # Dataset files
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/book_mnist_csv/
+!data/raw/book_mnist_csv/**
+!data/raw/book_own_images/
+!data/raw/book_own_images/**
 data/processed/*
 !data/processed/.gitkeep
 

@@ -107,8 +107,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\run_quick_start.ps1
 
 ### 第1章
 ```powershell
-python .\experiments\ch1\perceptron_numpy.py
-python .\experiments\ch1\mlp_xor_numpy.py
+python .\experiments\ch1\1.1_perceptron_linear_classifier.py
+python .\experiments\ch1\1.2_three_layer_neural_network_backprop.py
 ```
 
 ### 第2章

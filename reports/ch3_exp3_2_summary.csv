@@ -1,0 +1,4 @@
+mode,final_test_acc
+baseline,0.5474
+rotation_aug,0.6577
+improvement,0.11029999999999995

@@ -11,9 +11,8 @@
 - ch2/book_notebooks/part2_neural_network.ipynb: textbook base 3-layer network notebook.
 
 ## Chapter 3
-- ch3/custom_digit_test.py: inference on a user-provided handwritten image.
-- ch3/visualize_weights.py: visualize first-layer neuron weights.
-- ch3/rotate_augmentation.py: compare base training and rotation augmentation.
+- ch3/3.1_neural_network_mnist_backquery.py: standalone script for textbook backquery experiment (with metrics and figures).
+- ch3/3.2_neural_network_mnist_rotation_augmentation.py: standalone script comparing baseline vs rotation augmentation training.
 - ch3/book_notebooks/part3_neural_network_mnist_data_with_rotations.ipynb: textbook rotation augmentation training notebook.
 - ch3/book_notebooks/part3_neural_network_mnist_and_own_single_image.ipynb: textbook single custom image test notebook.
 - ch3/book_notebooks/part3_neural_network_mnist_and_own_data.ipynb: textbook custom image batch test notebook.

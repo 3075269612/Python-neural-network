@@ -103,10 +103,10 @@ python .\experiments\ch2\2.1_neural_network_mnist_data.py --epochs 5
 
 ### 第3章
 ```powershell
-python .\experiments\ch3\rotate_augmentation.py
-python .\experiments\ch3\rotate_augmentation.py --use-rotation --rotation-degree 20
-python .\experiments\ch3\visualize_weights.py
-python .\experiments\ch3\custom_digit_test.py --image <你的手写数字图片路径>
+python .\experiments\ch3\3.1_neural_network_mnist_backquery.py
+python .\experiments\ch3\3.2_neural_network_mnist_rotation_augmentation.py
+# 如需对照教材交互运行：
+jupyter notebook .\experiments\ch3\book_notebooks
 ```
 
 ## 产物位置

@@ -1,11 +1,11 @@
 # Python 神经网络课程项目
 
-本仓库用于《人工智能》课程课外自学项目，核心目标是基于教材逐章完成实验，并沉淀为可复现、可追踪、可提交的作业仓库。
+本仓库面向《人工智能》课程中的神经网络实验学习，内容围绕教材章节组织，提供可直接运行的脚本、实验报告与图表产物。
 
-## 项目目标
-- 按章节完成实验代码实现。
-- 规范保存模型、日志、图像和报告素材。
-- 通过 GitHub 持续记录实验过程与结论。
+## 项目内容
+- Chapter 1：感知机线性分类与三层网络反向传播基础。
+- Chapter 2：基于 MNIST 的全连接神经网络训练与评估。
+- Chapter 3：Backquery 可视化与旋转数据增强效果对比。
 
 ## 仓库结构
 
@@ -24,107 +24,80 @@
 |  |  `- book_notebooks/
 |- data/
 |  |- raw/
+|  |  |- MNIST/raw/
 |  |  |- book_mnist_csv/
 |  |  `- book_own_images/
-|  |- processed/
-|- models/
+|  `- processed/
 |- outputs/
 |  |- figures/
-|  |- logs/
+|  `- logs/
 |- reports/
-|  |- lab-report-template.md
-|- third_party/
-|  `- makeyourownneuralnetwork/
-`- .vscode/
+|- chapter_packages/
+|- models/
+`- third_party/
 ```
 
-## Python 环境说明
-已按你的要求固定为以下解释器：
-- D:/code/Python/ai_learn/python.exe
+## 环境与依赖
 - Python 3.10.x
+- 推荐环境：Conda
 
-可使用以下命令验证环境：
-
-```powershell
-python -c "import sys, numpy, matplotlib, torch, torchvision; print('python:', sys.version.split()[0]); print('numpy:', numpy.__version__); print('matplotlib:', matplotlib.__version__); print('torch:', torch.__version__); print('torchvision:', torchvision.__version__)"
-```
-
-## 教材源码整合（已完成）
-- 教材原始仓库已按章节分流到：
-	- experiments/ch2/book_notebooks
-	- experiments/ch3/book_notebooks
-- 教材 CSV 和手写图片样例已迁移到：
-	- data/raw/book_mnist_csv
-	- data/raw/book_own_images
-- 教材版权与说明文档保留在：
-	- third_party/makeyourownneuralnetwork
-- Notebook 中原有相对路径已改成项目统一数据目录路径，可直接运行。
-
-## 教材 Notebook 入口
-
-### Chapter 2（教材版）
-```text
-experiments/ch2/book_notebooks/part2_neural_network_mnist_data.ipynb
-```
-
-### Chapter 3（教材版）
-```text
-experiments/ch3/book_notebooks/part3_neural_network_mnist_data_with_rotations.ipynb
-experiments/ch3/book_notebooks/part3_neural_network_mnist_and_own_single_image.ipynb
-experiments/ch3/book_notebooks/part3_neural_network_mnist_backquery.ipynb
-```
-
-## 依赖安装
+安装依赖：
 
 ```powershell
 conda activate D:\code\Python\ai_learn
 pip install -r requirements.txt
 ```
 
-如需从环境文件重建：
+通过环境文件重建：
 
 ```powershell
 conda env create -f environment.yml
 conda activate ai_learn
 ```
 
-## 分章运行命令
+## 快速运行
 
-### 第1章
+### Chapter 1
 ```powershell
 python .\experiments\ch1\1.1_perceptron_linear_classifier.py
 python .\experiments\ch1\1.2_three_layer_neural_network_backprop.py
 ```
 
-### 第2章
+### Chapter 2
 ```powershell
 python .\experiments\ch2\2.1_neural_network_mnist_data.py --epochs 5
 ```
 
-### 第3章
+### Chapter 3
 ```powershell
 python .\experiments\ch3\3.1_neural_network_mnist_backquery.py
 python .\experiments\ch3\3.2_neural_network_mnist_rotation_augmentation.py
-# 如需对照教材交互运行：
-jupyter notebook .\experiments\ch3\book_notebooks
 ```
 
-## 产物位置
-- 训练日志：outputs/logs/*.csv
-- 图像结果：outputs/figures/*.png
-- 模型文件：models/*.pt
+## 教材 Notebook 入口
 
-## 报告编写建议
-1. 先运行实验得到日志、图和模型。
-2. 复制 reports/lab-report-template.md 作为每次实验报告模板。
-3. 将 deep-research-report.md 作为任务规划参考。
-4. 每完成一个实验小节就提交一次 Git 记录。
+Chapter 2：
 
-## GitHub 提交建议
-
-```powershell
-git checkout -b feat/ch1-baseline
-git add .
-git commit -m "init: chapter scaffold and baseline scripts"
-git push -u origin feat/ch1-baseline
+```text
+experiments/ch2/book_notebooks/part2_neural_network_mnist_data.ipynb
 ```
+
+Chapter 3：
+
+```text
+experiments/ch3/book_notebooks/part3_neural_network_mnist_data_with_rotations.ipynb
+experiments/ch3/book_notebooks/part3_neural_network_mnist_and_own_single_image.ipynb
+experiments/ch3/book_notebooks/part3_neural_network_mnist_backquery.ipynb
+```
+
+## 数据与产物说明
+- 训练数据：`data/raw/MNIST/raw`（IDX 全量）
+- 教材示例数据：`data/raw/book_mnist_csv`、`data/raw/book_own_images`
+- 实验图表：`outputs/figures`
+- 实验日志：`outputs/logs`
+- 实验报告：`reports`
+- 章节打包：`chapter_packages`
+
+## 参考资料
+- 教材配套源码及说明保存在 `third_party/makeyourownneuralnetwork`。
+- 课程实验规划与方法总结见 `deep-research-report.md`。

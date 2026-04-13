@@ -5,8 +5,8 @@
 - ch1/1.2_three_layer_neural_network_backprop.py: experiment 1.2 standalone script for three-layer network, backpropagation, training log, and visualization.
 
 ## Chapter 2
-- ch2/mnist_mlp_pytorch.py: MNIST training with PyTorch MLP.
-- ch2/book_notebooks/part2_neural_network_mnist_data.ipynb: textbook original MNIST CSV training notebook.
+- ch2/2.1_neural_network_mnist_data.py: experiment 2.1 standalone script converted from textbook notebook code (MNIST IDX full training and evaluation).
+- ch2/book_notebooks/part2_neural_network_mnist_data.ipynb: textbook original 3-layer network notebook for MNIST training.
 - ch2/book_notebooks/part2_mnist_data_set.ipynb: textbook MNIST CSV inspection notebook.
 - ch2/book_notebooks/part2_neural_network.ipynb: textbook base 3-layer network notebook.
 

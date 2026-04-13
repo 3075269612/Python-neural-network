@@ -33,9 +33,6 @@
 |  |- logs/
 |- reports/
 |  |- lab-report-template.md
-|- scripts/
-|  |- run_quick_start.ps1
-|  |- run_chapter3.ps1
 |- third_party/
 |  `- makeyourownneuralnetwork/
 `- .vscode/
@@ -91,18 +88,6 @@ conda env create -f environment.yml
 conda activate ai_learn
 ```
 
-## 一键快速开始
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\run_quick_start.ps1
-```
-
-该脚本会依次执行：
-- 环境检查。
-- 第1章感知机实验。
-- 第1章 XOR 三层网络实验。
-- 第2章 MNIST 小样本训练。
-
 ## 分章运行命令
 
 ### 第1章
@@ -113,7 +98,7 @@ python .\experiments\ch1\1.2_three_layer_neural_network_backprop.py
 
 ### 第2章
 ```powershell
-python .\experiments\ch2\mnist_mlp_pytorch.py --epochs 5
+python .\experiments\ch2\2.1_neural_network_mnist_data.py --epochs 5
 ```
 
 ### 第3章
